@@ -1,6 +1,13 @@
 ---
-title: Welcome to Quartz
+title: Welcome to the Notes
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+# Welcome to the Notes
+
+This is a place for me to jot down my learnings and thoughts.
+
+## Index
+
+- [[System Design]]
+- [[Extra]]
+- [[Low Level]]

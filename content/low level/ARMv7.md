@@ -67,7 +67,7 @@ _start:
 - `./hello` executes file
 - `echo $?` to print the error code on terminal
 
-![[Pasted image 20260410191659.png]]
+![[execute.png]]
 
 - `r0 has 2a becuase 42 is 2a in hex`
 - `r7 has 1`
@@ -168,7 +168,7 @@ _start:
 - It holds many different values that represent the current state of the running program
 - The bits in the CPSR register comprise of different flags that are updated or  when certain conditions occur.
 
-![[Pasted image 20260526042705.png]]
+![[cspr.png]]
 
 - Condition flags, `bits[31:28]` : Set on the result of instruction execution. The flags are:
         - N, `bit[31]` : Negative condition flag
@@ -221,12 +221,217 @@ _start:
 
 .text
 _start:
-        ldr r0, =var1
-        ldr r1 ,[r0]
+        ldr r0, =var1 //put the memory address (location) into register r0 of var1
 
 .data
 // 2 byte or 16 bits word data type
-var1: .word 5
+var1: .word 5 
 var2: .word 6
 
+// r0 : 00000008 -> It is 8 because 5 is stored at memory address 8
+// pc : 00000004
 ```
+
+- Memory
+`|Address|Memory Address 0|Memory Address 4|Memory Address 8|Memory Address 12|`
+
+![[mem.png]]
+
+----
+
+- Using LDR with brackets load the actual value similar to dereferencing a pointer
+- It tracks memory address that currently in r0 and actually get the value it is pointing to
+- 
+
+
+```
+.global _start
+
+.text
+_start:
+        ldr r0, =var1 
+        ldr r1, [r0]
+
+.data
+// 2 byte or 16 bits word data type
+var1: .word 5 
+var2: .word 6
+
+// r0 : 000000010 -> Value can change not fixed
+// r1 : 00000005
+// pc : 00000008
+```
+
+
+- Memory
+![[memldr.png]]
+
+## STR
+- `STR (register)`
+	- Store Register (register) calculates an address from a base register value and an offset register value, stores a word from a register to a memory
+	- The offset register value can optionally be shifted.
+- `STR<c> <Rt>, [<Rn>, <Rm>]`
+
+```
+.global _start
+
+.text
+_start:
+        ldr r0, =var1 
+		ldr r1, [r0]
+		mov r2, #3 // acts as source register, stores value that we actaully want to replace it with.
+		ldr r3, =var2 // acts as destiantion or base register
+		// loading memory location that is currently storing var2 in r3
+		str r2, [r3] // In that memory location we will replace 6 with 3
+
+.data
+var1: .word 5 
+var2: .word 6
+
+// r0 : 00000020
+// r1 : 00000005
+// r2 : 00000003
+// r3 : 00000024
+// pc : 00000014
+```
+
+Memory before
+![[strmem-before.png]]
+
+Memory after
+![[strmem-after.png]]
+
+# Logical Operator
+## AND
+- `AND(immediate)`
+	- Boolean AND returns true when both inputs are true.
+	- This instruction performs a bitwise AND of a register value and an immediate value and writes the result to the destination register
+- `AND{S}<c> <Rd>, <Rn>, #<const>`
+
+```
+.global _start
+_start:
+	
+	mov r0, #0x42
+	and r1, r0, #0x16
+// 00000042 -> 00000000000000000000000001000010
+// 00000016 -> 00000000000000000000000000010110
+//------------------------
+// 00000002 <- 00000000000000000000000000000010
+// r0 : 00000042 
+// r1 : 00000002
+// pc : 00000008
+```
+## ORR
+- `ORR(immediate)`
+	-  Boolean OR returns true when at least one input is true.
+	- Bitwise OR (immediate) performs a bitwise (inclusive) OR of a register value and an immediate value and writes the result to the destination register 
+	- It can optionally update the condition flags based on the result
+- `ORR{S}<c> <Rd>, <Rn>, #<const>`
+
+```
+.global _start
+_start:
+	
+	mov r0, #0x42
+	orr r1, r0, #0x26
+// 00000042 -> 00000000000000000000000001000010
+// 00000016 -> 00000000000000000000000000100110
+//------------------------
+// 00000066 <- 00000000000000000000000001100110
+// r0 : 00000042 
+// r1 : 00000066
+// pc : 00000008
+```
+
+- `EOR(immediate)`
+	- Exclusive OR returns true if one input is true and other one is false
+	- Bitwise Exclusive OR (immediate) performs a bitwise Exclusive OR of a register value and an immediate value and write the result to the destination register.
+	- It can optionally update the condition flags based on the result
+- `EOR{S}<c> <Rd>, <Rn>, #<const>`
+
+```
+.global _start
+_start:
+	
+	mov r0, #0x42
+	orr r1, r0, #0x26
+// 00000042 -> 00000000000000000000000001000010
+// 00000016 -> 00000000000000000000000000100110
+//------------------------
+// 00000064 <- 00000000000000000000000001100100
+// r0 : 00000042 
+// r1 : 00000064
+// pc : 00000008
+```
+
+## MVN
+- `MVN(register)`
+	-  Bitwise NOT (register) writes the bitwise inverse of a register value to the destination register. 
+	- It can optionally update the condition flag based on the result
+- `MVNS <Rd>, <Rm>`
+- `MVN<c> <Rd>, <Rm>`
+
+```
+.global _start
+_start:
+	
+	mov r0, #0x42
+	mvn r1, r0
+// 00000042 -> 00000000000000000000000001000010
+//------------------------
+// ffffffbd <- 11111111111111111111111110111101
+// r0 : 00000042 
+// r1 : ffffffbd
+// pc : 00000008
+```
+
+# ARM Processor data types and Arithematic
+- ARMv7-M processors support the following data types in memory
+	- Byte -> 8 bits
+	- Halfword -> 16 bits
+	- Word -> 32 bits
+- Why is this called 32 bits architecture
+	- Each of the processor registers hold 8 different zeros so these are actually representing a hexadecimal number so each one of these zeros individually is actually 4 bits of data and that equates to total of 32 bits. 
+	- 4 bits of data for these individual hexadecimal is called nibble. 4 bits is a nibble, a nibble of 8 bits is a byte.
+## Signed and Unsigned Numbers
+
+- Computers use two's complement to represent signed numbers
+- We actually have one bit that represents the actual sign of the number . 1 stands for negative and 0 stands for positive 
+	- All the bits on the left hand side of the number are actually going to be padded with the same value of that individual signed bit.
+- To convert to positive we flip all bit except the least significant bit (LSB) that is non-zero and all bits to its right
+
+![[Unisigned.png]]
+
+```
+Hex : 0-9, A:10, B:11, C:12, D:13, E:14, F:15
+n   :  5, 4,3,2,1,0
+2^n : 32,16,8,4,2,1
+
+Hex : 00000019
+Binary: 0000 0000 0000 0000 0000 0000 0001 1001
+Decimal: 1+8+16 = 25
+Hex : ffffffe7
+Binary:        1111 1111 1111 1111 1111 1111 1110 0111
+2s Compliment: 0000 0000 0000 0000 0000 0000 0001 1001
+Decimal: 1+8+16 = 25; we did compliment hence -25 
+
+Hex : 00000010
+Binary: 0000 0000 0000 0000 0000 0000 0001 0000
+Decimal: 16
+Hex : fffffff0 
+Binary:        1111 1111 1111 1111 1111 1111 1111 0000
+2s Compliment: 0000 0000 0000 0000 0000 0000 0001 0000
+Decimal: 16; we did compliment hence -16 
+```
+# Shift and Rotate
+- Shift and rotate amounts can be specified by register or immediate values
+## LSL
+- Stands for Logical Shift Left
+- `LSL(Immediate)` 
+	- Logical Shift Left (immediate) shifts a register value left by an immediate number of bits, shifting in zeroes, and writes the result to the destination register
+	- It can optionally update the condition flag based on the result
+- `LSLS <Rd>,<Rm>,#<imm5>`
+- `LSL<c> <Rd>,<Rm>,#imm<5>`
+- We have a number inside our register operand `<Rm>`; The number specified in `#<imm5>` is going to be number of times that all of the bits inside of the register  operand are shift to the left, and shifted result is stored in `<Rd>` 
+
