@@ -224,6 +224,7 @@
 
 # TCP and UDP
 ## TCP
+
 - TCP is a Layer 4 protocol that ensures reliable, ordered, and error-checked data delivery between devices. 
 - It establishes connections using a three-way handshake and guarantees that all packets arrive correctly.
 - Breaks data into packets and reassembles them in order
@@ -232,6 +233,7 @@
 - Commonly used for web browsing, email, and file transfers
 
 ### Use Cases of TCP Protocol
+
 1. Web Browsing
 	- When you type a URL into your browser, your computer uses TCP to establish a connection with the web server.
 	- TCP ensures that the HTML, CSS, and JavaScript files that make up the webpage are delivered accurately and in the correct order.
@@ -239,12 +241,12 @@
 	- Protocols like SMTP (Simple Mail Transfer Protocol) and IMAP (Internet Message Access Protocol) rely on TCP for sending and receiving emails.
 	- TCP guarantees that your emails are delivered completely and in the correct sequence.
 3. File Transfer
-	- Protocols like FTP (File Transfer Protocol) and [SFTP](https://www.geeksforgeeks.org/computer-networks/sftp-file-transfer-protocol/) (Secure File Transfer Protocol) utilize TCP for transferring files between computers.
+	- Protocols like FTP (File Transfer Protocol) and SFTP (Secure File Transfer Protocol) utilize TCP for transferring files between computers.
 	- TCP's reliability ensures that files are transferred accurately and without data corruption.
 
 ### 4. Remote Access
 
-- Protocols like Telnet and SSH ([Secure Shell](https://www.geeksforgeeks.org/computer-networks/introduction-to-ssh-secure-shell-keys/)) use TCP for remote access to other computers.
+- Protocols like Telnet and SSH (Secure Shell) use TCP for remote access to other computers.
 - TCP ensures that commands and data are transmitted reliably, allowing you to interact with remote systems securely.
 
 ### 5. Online Banking and Financial Transactions
@@ -254,40 +256,33 @@
 
 ## What is User Datagram Protocol (UDP)?
 
-****User Datagram Protocol (****[****UDP****](https://www.geeksforgeeks.org/computer-networks/user-datagram-protocol-udp/)****)**** is a Layer 4 protocol that sends data as independent datagrams without establishing a connection, offering no guarantees for delivery, order, or error correction. Its low overhead and minimal delay make it ideal for real-time applications where speed matters more than reliability.
+User Datagram Protocol (UDP) is a Layer 4 protocol that sends data as independent datagrams without establishing a connection, offering no guarantees for delivery, order, or error correction. Its low overhead and minimal delay make it ideal for real-time applications where speed matters more than reliability.
 
 - Connectionless communication (no handshake)
 - Sends datagrams without delivery or ordering guarantees
 - Very low latency and overhead
 - No retransmission or error correction
 - Used for streaming, online gaming, and VoIP
-
-![UDP](https://media.geeksforgeeks.org/wp-content/uploads/20241218113234067129/UDP-2.png "Click to enlarge")
-
 ## Use Cases of the UDP Protocol
 
-UDP (User Datagram Protocol) is a connectionless protocol that prioritizes speed and efficiency over reliability. Here are some key use cases of the UDP:
+UDP (User Datagram Protocol) is a connectionless protocol that prioritizes speed and efficiency over reliability. Here are some key use cases of the UDP
+###   1. Real-time Applications
 
-![use_cases_of_the_udp_protocol](https://media.geeksforgeeks.org/wp-content/uploads/20250731162455004920/use_cases_of_the_udp_protocol.webp "Click to enlarge")
-
-###   
-1. Real-time Applications
-
-- ****Voice over IP (****[****VoIP****](https://www.geeksforgeeks.org/computer-networks/voice-over-internet-protocol-voip/)****):**** Services like Skype, Zoom, and Google Meet often utilize UDP for real-time voice and video communication. While some packet loss is acceptable, minimizing latency is crucial for a smooth conversation.
-- ****Online Gaming:**** Many online games rely on UDP for fast, low-latency communication between players and game servers. This ensures responsiveness and prevents gameplay delays.
-- ****Video Conferencing:**** Similar to VoIP, UDP is used for real-time video conferencing applications where timely delivery of video and audio streams is essential.
+- Voice over IP (VoIP): Services like Skype, Zoom, and Google Meet often utilize UDP for real-time voice and video communication. While some packet loss is acceptable, minimizing latency is crucial for a smooth conversation.
+- Online Gaming: Many online games rely on UDP for fast, low-latency communication between players and game servers. This ensures responsiveness and prevents gameplay delays.
+- Video Conferencing: Similar to VoIP, UDP is used for real-time video conferencing applications where timely delivery of video and audio streams is essential.
 
 ### 2. Streaming Media
 
-- ****Live Streaming:**** Services like Twitch, YouTube Live, and Netflix use UDP for streaming audio and video content. While some packet loss is acceptable, UDP's speed and efficiency are crucial for delivering a smooth streaming experience.
+- Live Streaming: Services like Twitch, YouTube Live, and Netflix use UDP for streaming audio and video content. While some packet loss is acceptable, UDP's speed and efficiency are crucial for delivering a smooth streaming experience.
 
 ### 3. Network Management Protocols
 
-- ****DNS (****[****Domain Name System****](https://www.geeksforgeeks.org/system-design/whats-is-domain-name-systemdns/)****):**** UDP is commonly used for [DNS lookups](https://www.geeksforgeeks.org/computer-networks/dns-look-up/), where quick responses are essential for resolving domain names into IP addresses.
-- ****SNMP (****[****Simple Network Management Protocol****](https://www.geeksforgeeks.org/computer-networks/simple-network-management-protocol-snmp/)****):**** This protocol is used for monitoring and managing network devices. UDP's speed and efficiency make it suitable for collecting performance data from network devices.
-- ****DHCP (****[****Dynamic Host Configuration Protocol****](https://www.geeksforgeeks.org/computer-networks/dynamic-host-configuration-protocol-dhcp/)****):**** UDP is used for dynamically assigning IP addresses to devices on a network.
+- DNS (Domain Name System): UDP is commonly used for DNS lookups, where quick responses are essential for resolving domain names into IP addresses.
+- SNMP (Simple Network Management Protocol): This protocol is used for monitoring and managing network devices. UDP's speed and efficiency make it suitable for collecting performance data from network devices.
+- DHCP (Dynamic Host Configuration Protocol): UDP is used for dynamically assigning IP addresses to devices on a network.
 
 ### 4. Broadcast and Multicast
 
-- ****Broadcast Applications:**** UDP is well-suited for broadcast applications where a single message needs to be sent to multiple recipients simultaneously, such as network discovery protocols.
-- ****Multicast Applications:**** UDP is used for multicast applications where a message needs to be sent to a specific group of recipients efficiently.
+- Broadcast Applications: UDP is well-suited for broadcast applications where a single message needs to be sent to multiple recipients simultaneously, such as network discovery protocols.
+- Multicast Applications: UDP is used for multicast applications where a message needs to be sent to a specific group of recipients efficiently.

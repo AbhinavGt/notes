@@ -2,9 +2,7 @@
 title: Welcome to the Notes
 ---
 
-# Welcome to the Notes
-
-This is a place for me to jot down my learnings and thoughts.
+This is a place for me to jot down my leanings and thoughts.
 
 ## Index
 

@@ -1,0 +1,364 @@
+
+- [ ] RegEx
+- [ ] Reverse Engineering
+	- [ ] ARM
+		- [x] ARM Lesson 1 :- `MOV, Exit, Syscall`
+		- [x] ARM Lesson 2 :-  `ADD, SUB, MUL, set CPSR`
+		- [x] ARM Lesson 3 :- `LDR, STR`
+		- [x] ARM Lesson 4 :- `Logical Operator`
+		- [x] ARM Lesson 5 :- `Signed Number Conversions`
+		- [x] ARM Lesson 6 :- `Shift and Rotate`
+		- [x] ARM Lesson 7 :- `CMP`
+		- [x] ARM Lesson 8 :- `Branching`
+		- [x] ARM Lesson 9 :- `While Loops`
+		- [ ] ARM Lesson 10 :- `Function calls`
+		- [ ] ARM Lesson 11 :- `Stack Operation`
+- [ ] Bash
+- [ ] System Design
+	- [ ] Part 0 — Prerequisites
+		- [ ] Operating Systems
+			- [ ] Processes vs Threads
+			- [ ] Context Switching
+			- [ ] Scheduling
+			- [ ] Virtual Memory
+			- [ ] Paging
+			- [ ] Synchronization
+			- [ ] Deadlocks
+			- [ ] File Systems
+		- [ ] Computer Networks
+			- [ ] IP
+			- [ ] Subnetting
+			- [ ] Routing
+			- [ ] NAT
+			- [ ] TCP
+			- [ ] UDP
+			- [ ] HTTP/HTTPS
+			- [ ] HTTP/2
+			- [ ] HTTP/3
+			- [ ] QUIC
+			- [ ] WebSockets
+			- [ ] DNS
+	- [ ] Part 1 — System Design Fundamentals
+		- [ ] Scalability
+			- [ ] Vertical Scaling
+			- [ ] Horizontal Scaling
+			- [ ] Bottlenecks
+			- [ ] Throughput
+			- [ ] Latency
+		- [ ] Availability
+			- [ ] Uptime
+			- [ ] Failover
+			- [ ] Redundancy
+			- [ ] Health Checks
+		- [ ] Load Balancing
+			- [ ] L4 vs L7
+			- [ ] Round Robin
+			- [ ] Least Connections
+			- [ ] Weighted Routing
+			- [ ] Sticky Sessions
+		- [ ] Reverse Proxy
+			- [ ] Caching
+			- [ ] SSL Termination
+		- [ ] Content Delivery Networks
+			- [ ] Edge Servers
+			- [ ] Cache Invalidation
+		- [ ] Caching
+			- [ ] Cache Aside
+			- [ ] Read Through
+			- [ ] Write Through
+			- [ ] Write Back
+			- [ ] Cache Warming
+			- [ ] Cache Stampede
+			- [ ] Cache Eviction Policies
+				- [ ] LRU
+				- [ ] LFU
+				- [ ] FIFO
+	- [ ] Part 2 — Storage Systems
+		- [ ] Databases
+			- [ ] DBMS
+			- [ ] SQL
+			- [ ] NoSQL
+		- [ ] SQL
+			- [ ] MySQL
+			- [ ] PostgreSQL
+		- [ ] NoSQL
+			- [ ] Key Value
+			- [ ] Document
+			- [ ] Column Family
+			- [ ] Graph
+		- [ ] Data Modeling
+			- [ ] ER Diagrams
+			- [ ] Relationships
+			- [ ] Constraints
+		- [ ]  Indexing
+			- [ ] Clustered Index
+			- [ ] Non-clustered Index
+			- [ ] Composite Index
+			- [ ] Covering Index
+		- [ ] Normalization
+			- [ ] 1NF
+			- [ ] 2NF
+			- [ ] 3NF
+			- [ ] BCNF
+		- [ ] Denormalization
+	- [ ] Part 3 — Database Internals
+		- [ ] Storage Engines
+			- [ ] B-Trees
+				- [ ] Node Structure
+				- [ ] Range Queries
+				- [ ] Insert/Delete
+			- [ ] LSM Trees
+				- [ ] Memtable
+				- [ ] SSTable
+				- [ ] Compaction
+		- [ ] Write Ahead Logs
+			- [ ] Crash Recovery
+		- [ ] Bloom Filters
+		- [ ] MVCC
+			- [ ] Snapshot Isolation
+		- [ ] Query Optimizer
+			- [ ] Execution Plans
+			- [ ] Cost Based Optimization
+	- [ ] Part 4 — Distributed Databases
+		- [ ] Replication
+			- [ ] Leader Follower
+			- [ ] Multi Leader
+			- [ ] Leaderless
+		- [ ] Sharding
+			- [ ] Range Based
+			- [ ] Hash Based
+			- [ ] Directory Based
+		- [ ] Consistent Hashing
+			- [ ] Virtual Nodes
+		- [ ] Federation
+		- [ ] Distributed Transactions
+			- [ ] Two Phase Commit
+			- [ ] Three Phase Commit
+			- [ ] Saga Pattern
+		- [ ] CAP Theorem
+		- [ ] PACELC
+		- [ ] Consistency Models
+			- [ ] Strong
+			- [ ] Eventual
+			- [ ] Causal
+			- [ ] Read Your Writes
+		- [ ] Quorums
+			 - [ ] Read Quorum
+			- [ ] Write Quorum
+	- [ ] Part 5 — Distributed Systems
+		- [ ] Consensus
+			- [ ] Raft
+				- [ ] Elections
+				- [ ] Log Replication
+				- [ ] Commit Index
+			- [ ] Paxos
+				- [ ] Proposer
+				- [ ] Acceptor
+				- [ ] Learner
+		- [ ] Leader Election
+		- [ ] Distributed Locks
+		- [ ] Leases
+		- [ ] Heartbeats
+		- [ ] Split Brain
+		- [ ] Fencing Tokens
+		- [ ] ZooKeeper
+		- [ ] etcd
+	- [ ] Part 6 — Messaging & Event Systems
+		- [ ] Message Queues
+			- [ ] RabbitMQ
+			- [ ] ActiveMQ
+		- [ ] Publish Subscribe
+		- [ ] Event Driven Architecture
+		- [ ] Event Sourcing
+		- [ ] CQRS
+		- [ ] Apache Kafka
+			- [ ] Topics
+			- [ ] Partitions
+			- [ ] Replicas
+			- [ ] Consumer Groups
+			- [ ] Offsets
+			- [ ] Retention
+			- [ ] Delivery Guarantees
+				- [ ] At Most Once
+				- [ ] At Least Once
+				- [ ] Exactly Once
+			- [ ] Kafka Internals
+				- [ ] ISR
+				- [ ] Controller
+				- [ ] Rebalancing
+	- [ ] Part 7 — API Design
+		- [ ] REST
+		- [ ] GraphQL
+		- [ ] gRPC
+		- [ ] API Versioning
+		- [ ] Pagination
+			- [ ] Offset
+			- [ ] Cursor
+		- [ ] API Gateway
+		- [ ] Rate Limiting
+			- [ ] Token Bucket
+			- [ ] Leaky Bucket
+			- [ ] Fixed Window
+			- [ ] Sliding Window
+	- [ ] Part 8 — Microservices
+		- [ ] Monoliths
+		- [ ] Microservices
+		- [ ] Service Discovery
+			- [ ] Client Side
+			- [ ] Server Side
+		- [ ] Service Mesh
+			- [ ] Istio
+			- [ ] Linkerd
+		- [ ] Sidecars
+		- [ ] Circuit Breakers
+		- [ ] Bulkheads
+		- [ ] Retries
+			- [ ] Exponential Backoff
+			- [ ] Jitter
+		- [ ] Idempotency
+	- [ ] Part 9 — Cloud Native Systems
+
+		- [ ] Virtual Machines
+		 - [ ] Containers
+			- [ ] Docker
+		- [ ] Kubernetes
+			- [ ] Pods
+			- [ ] Deployments
+			- [ ] Services
+			- [ ] ConfigMaps
+			- [ ] Secrets
+			- [ ] StatefulSets
+			- [ ] Ingress
+			- [ ] Autoscaling
+			- [ ] Operators
+		- [ ] Serverless
+			- [ ] AWS Lambda
+			- [ ] Cloud Functions
+	- [ ] Part 10 — Observability
+		- [ ] Logging
+			- [ ] Structured Logging
+			- [ ] Log Aggregation
+		- [ ] Metrics
+			- [ ] Counters
+			- [ ] Gauges
+			- [ ] Histograms
+		- [ ] Tracing
+			- [ ] Distributed Tracing
+			- [ ] Span
+			- [ ] Trace Context
+		- [ ] Monitoring
+			- [ ] Alerting
+				- [ ] Prometheus Tool
+				- [ ] Grafana Tool
+				- [ ] Jaeger Tool
+				- [ ] ELK Stack Tool
+	- [ ] Part 11 — Security
+		- [ ] Authentication
+			- [ ] Sessions
+			- [ ] JWT
+			- [ ] OAuth 2.0
+			- [ ] OpenID Connect
+			- [ ] SSO
+		- [ ] Authorization
+			- [ ] RBAC
+			- [ ] ABAC
+		- [ ] Encryption
+			- [ ] SSL
+			- [ ] TLS
+			- [ ] mTLS
+		- [ ] Secrets Management
+			- [ ] Vault
+			- [ ] KMS
+		- [ ] Key Rotation
+	- [ ] Part 12 — Reliability Engineering
+		- [ ] SLA
+		- [ ] SLO
+		- [ ] SLI
+		- [ ] Disaster Recovery
+			- [ ] RPO
+			- [ ] RTO
+		- [ ] Fault Tolerance
+		- [ ] Chaos Engineering
+		- [ ] Graceful Degradation
+	- [ ] Part 13 — Search Systems
+		- [ ] Inverted Index
+		- [ ] Tokenization
+		- [ ] Stemming
+		- [ ] Ranking
+		- [ ] Relevance Scoring
+		- [ ] Search Suggestions
+		 - [ ] Autocomplete
+			- [ ] Elasticsearch Tool
+			- [ ] OpenSearch Tool
+	- [ ] Part 14 — Geo Distributed Systems
+		- [ ] Geo Replication
+		- [ ] Multi Region Architecture
+			- [ ] Active Active
+			- [ ] Active Passive
+		- [ ] Global Load Balancing
+		- [ ] Data Locality
+		- [ ] Geo Hashing
+		- [ ] Quad Trees
+	- [ ] Part 15 — Data Engineering
+		- [ ] Batch Processing
+			- [ ] Hadoop
+			- [ ] Spark
+		- [ ] Stream Processing
+			 - [ ] Flink
+			- [ ] Spark Streaming
+		- [ ] ETL
+		- [ ] Data Warehouses
+		- [ ] Data Lakes
+		- [ ]  OLTP vs OLAP
+	- [ ] Part 16 — Design Patterns for Scale
+		- [ ] URL Shortener
+		- [ ] Pastebin
+		- [ ]  TinyURL
+		- [ ] Distributed Cache
+		- [ ] Rate Limiter
+		- [ ] Notification Service
+		- [ ] Search Autocomplete
+		- [ ] Chat System
+		- [ ] Video Streaming
+		- [ ] News Feed
+		- [ ] Ride Sharing
+		- [ ] Payment System
+		- [ ] Ad Click Tracking
+	- [ ] Part 17 — Real System Design Case Studies
+		 - [ ] WhatsApp
+			- [ ] Presence Service
+			- [ ] Message Delivery
+			 - [ ] Group Chats
+		- [ ] Twitter/X
+			- [ ] Timeline Generation
+			- [ ] Fanout
+			- [ ] Trending
+		- [ ]  YouTube
+			- [ ] Video Upload Pipeline
+			- [ ] CDN Strategy
+		- [ ] Netflix
+			- [ ] Recommendation System
+			- [ ] Streaming Pipeline
+		- [ ] Uber
+			- [ ] Driver Matching
+			- [ ] Geospatial Queries
+		- [ ] Google Drive
+			- [ ] File Storage
+			- [ ] Synchronization
+		- [ ] Instagram
+			- [ ] Feed Generation
+			 - [ ] Stories
+	- [ ] Part 18 — Interview-Specific Topics
+		- [ ] Requirement Gathering
+		 - [ ] Capacity Estimation
+			- [ ] QPS
+			- [ ] Storage
+			- [ ] Bandwidth
+		- [ ] Identifying Bottlenecks
+		- [ ] Trade-off Analysis
+		- [ ] Scaling Strategies
+		- [ ] Whiteboard Communication
+		- [ ] Interview Frameworks
+
+
+
