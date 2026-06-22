@@ -752,8 +752,135 @@ int main (void){
 ```
 .global _start
 _start:
-	
-	mov r0, #1
-	mov r1, #2
-	
+	mov r0, #1 //arg1; r0 -> 00000001
+	mov r1, #2 //arg2; r1 -> 00000002
+	push {r0,r1} //saving state on top of stack; sp -> fffffff8
+	bl add_nums // lr -> 00000010
+	mov r2, r0 // link register is going to specify the address of this instruction; r2 -> 00000003
+	pop {r0,r1} //restoring state from top of stack; r0 -> 00000001; lr->00000000
+add_nums:
+	add r0, r0,r1; // r0 -> 00000003
+	bx lr
+
+// pc -> 00000018	
 ```
+
+![[func-push.png]]
+
+![[func-pop.png]]
+
+
+
+- The return value of functions inside ARMv7 is going to be stored in `r0 - r3`.
+- So, If we want return value after actual function call. We check the register to actually get that value
+- Method invocation
+	- For method invocation we use special branching instruction `bl` 
+	- `BL, BLX (immediate)`
+		- Branch with Link calls the subroutine at a PC-relative address.
+		- Branch with Link and Exchange Instruction Sets (immediate) calls a subroutine at a PC-relative address and changes instruction set from ARM to Thumb or from Thumb to ARM
+		- `BL<c> <label> `
+		- Its a special instruction that sets the link register.
+	- `LR` register stores the address of the instruction to execute after the function call
+	- To exit out of the branching label we use special instruction 'bx'
+		- It specifies the link register and jumps to the address it contains
+		- `BX` : - Branch and Exchange causes a branch to an address and instruction set specified by a register.
+		- `BX<c> <Rm>`
+	- Saving the state of register
+		- We have to save the state of out registers before we perform our function call because we are changing the value of `r0 in add_nums function`. 
+		- If we want to access the original value of register after we are done with function call, the value would have been overwritten. Hence we push these values to stack
+	- Stack is an extra location in memory that is going to be used for storing local variables, since we have finite number of processor register
+	- `PUSH and POP`
+		- Push low registers, and optionally the lr, onto stack. Saving the state of register onto stack
+		- Pop low registers and optionally the pc , off stack. Restoring the state of register back to registers
+		- `Push {regList}` and `POP{regList}`
+		- `PUSH {regList, lr}` and `POP{regList, pc }
+		- `{regList}` is comma-separated list of low registers 
+	- `Sp` points to the top value on the stack
+# Stack Operation
+- Example :- To add 6 numbers
+	- `R0-R3` store the first four function arguments
+	- For rest arguments we will use stack
+
+```
+.global _start
+_start:
+	push {lr}
+	mov r0, #1 
+	mov r1, #2
+	mov r2, #3
+	mov r3, #4
+	sub sp, sp, #8
+	mov r4, #6
+	str r4,[sp]
+	mov r4, #5
+	str r4,[sp, #4]
+	
+	bl add_nums 
+	mov r2, r0
+	add sp, sp, #8
+	pop {lr}
+add_nums:
+	add r0, r0, r1;
+	add r0, r0, r2;
+	add r0, r0, r3;
+	ldr r4, [sp, #4]
+	add r0, r0, r4;
+	ldr r4, [sp];
+	add r0, r0, r4;
+	bx lr;
+```
+
+- Step 1 :- Store first 4 arguments
+	- Since `r0-r3` can store our first 4 argument we store them with `MOV(immediate)`
+- We have to make sure that our stack stays the way it was after our execution of program is complete
+- Step 2 :- Store `lr` onto stack
+	- It is optional but a good practice to store `lr(ink register)` value so that my program knows where to jump back after branching.
+		- Hence we `push {lr}` to store value of link register in stack
+		- we `pop {lr}` to get value back from stack and make it the way it was.
+- Step 3 :- Allocating space for arguments in stack
+	- To store the rest arguments in stack we have to allocate the space for them in stack
+		- Hence we do `sub sp, sp, #8`
+		- We subtract from the original address value that we have in stack pointer.
+	- In ARMv7, integer values are 4 bytes long. Hence we subtract 8.
+	- The stack grows downward in memoy; Hence we subtract from stack pointer to allocate space for new values
+	- We have to get rid of the values that we previously store allocated
+		- Because stack must not be affected after you are done with program
+		- Hence we `add sp, sp, #8`
+- Step 4 :- Storing rest arguments onto stack  
+	- We pass values  to the stack in reverse order because, Stack works on `LIFO` (Last In First Out)
+		- `str r4, [sp]` 
+			- Stack Pointer is pointing to the address that is on top of stack
+			- Hence we store argument 6 to the address that stack pointer is pointing to
+		- `str r4, [sp, #4]` 
+			- We offset the stack pointer by four bytes because the first four bytes are taken by argument 6
+			- Offset moves the address stored in stack pointer by specified bits.
+			- Now we can store argument 5 at the address the stack pointer is pointing to.
+- Step 5 :- adding first 4 argument in `add_nums:` function
+	- `add r0, r0, r1`
+	- `add r0, r0, r2`
+	- `add r0, r0, r3`
+- Step 6 :- adding rest arguments in `add_nums` function
+	- Now we fetch our rest arguments from stack and add
+	- `ldr r4, [sp, #4]` 
+		- Stack pointer offset by 4 is the address that is pointing to argument 5
+		- Hence we load value from `[sp, #4]` onto `r4`
+		- `add r0, r0, r4;` 
+	- `ldr r4, [sp]` 
+		- Stack pointer now is the address that is pointing to argument 6, load value onto `r4`
+		- `add r0, r0, r4;` 
+- Step 7 :- Branch out of function `add_nums`
+
+
+```
+00000000 |      | <-- after pop{lr}
+fffffffc |  lr  | <-- sp; after push{lr}; after sub sp, sp, #8
+fffffff8 | arg5 | 
+fffffff4 | arg6 | <-- sp; after sub sp, sp, #8; after str r4,[sp, #4]
+--------
+```
+
+## Running
+
+![[sp-working.png]]
+
+![[arg-stored.png]]
