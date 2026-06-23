@@ -567,7 +567,7 @@
 ------------------
 
 
-# Cohort 1 - Full Stack
+# Cohort 2 - Full Stack
 
 > [!todo]- Harnoor's Android
 > > [!todo]- Week 1 - Introduction
@@ -802,11 +802,202 @@
 
 
 > [!todo]- Full Stack
-
+> > [!todo]- Week 0 - Introduction
+> > > - [ ] Part 0.1 - Introduction, Setting up IDE
+> > > - [ ] Part 0.2 - HTML basic (Tags, Attribute)
+> > > - [ ] Part 0.3 - CSS Basic
+>
+> > [!todo]- Week 1 - JS
+> > > - [ ] Part 1.1 - Orientation
+> > > - [ ] Part 1.2 - JS Foundations
+> > > - [ ] Part 1.3 - JS APIs (offline)
+> > > - [ ] Part 1.4 - Loops, Functions, Callback funcitons
+> > > - [ ] Part 1.5 - Async functions, Promises and Async/Await
+>
+> > [!todo]- Week 2 - Backend
+> > > - [ ] Part 2.1 - Promises and async JS revision, doubt session
+> > > - [ ] Part 2.2 - Express and Backend
+> > > - [ ] Part 2.3 - Bash and Terminal
+> > > - [ ] Part 2.4 - Bash and Terminal (advanced)
+> > > - [ ] Part 2.5 - Express Basics
+> > > - [ ] Part 2.6 - Map, Filter, Arrow Functions
+> > > - [ ] Part 2.7 - Git basics to advance
+>
+> > [!todo]- Week 3 - Backend Advanced
+> > > - [ ] Part 3.0.1 - Covering up in Week 3
+> > > - [ ] Part 3.0.2 - JS Foundation revision
+> > > - [ ] Part 3.0.3 - NodeJS Runtime
+> > > - [ ] Part 3.0.4 - Express Basics
+> > > - [ ] Part 3.0.5 - Express Advance Intro
+> > > - [ ] Part 3.0.6 - Databases Intro
+> > > - [ ] Part 3.0.7 - Mongo Installation
+> > > - [ ] Part 3.0.8 - Postgres Installation
+> > > - [ ] Part 3.1 - Middlewares, global catches, and zod
+> > > - [ ] Part 3.2 - Databases, and Auth
+> > > - [ ] Part 3.3 - Middelware recap and assignment
+> > > - [ ] Part 3.4 - JWT recap and assignment
+> > > - [ ] Part 3.5 - DOM Introduction
+>
+> > [!todo]- Week 4 - DOM
+> > > - [ ] Part 4.1 - DOM
+> > > - [ ] Part 4.2 - Foundation for React
+> > > - [ ] Part 4.3 - Mongo offline
+>
+> > [!todo]- Week 5 - React
+> > > - [ ] Part 5.1 - Diving into React
+> > > - [ ] Part 5.1 - React (Local Recording)
+> > > - [ ] Part 5.2 - Creating a To-do app
+> > > - [ ] Part 5.2 - Creating a To-do app (reupload)
+>
+> > [!todo]- Week 6 - React hooks
+> > > - [ ] Part 6.1 - Popular React Hooks, React deep dive
+> > > - [ ] Part 6.2 - useEffect, useMemo, useCallback
+> > > - [ ] Part 6.3 - Recap of everything in react, Intro to useRef
+> > > - [ ] Part 6.4 - Assignment solutions
+>
+> > [!todo]- Week 7 - Recoil
+> > > - [ ] Part 7.1 - Context, prop drilling
+> > > - [ ] Part 7.2 - Recoil
+> > > - [ ] Part 7.3 - Recoil deep dive
+>
+> > [!todo]- Week 8 - Tailwind, Projects
+> > > - [ ] Part 8.0 - Tailwind from cohort 1
+> > > - [ ] Part 8.1 - Tailwind from cohort 2
+> > > - [ ] Part 8.2 - Building Paytm Project
+> > > - [ ] Part 8.3 - Axios vs Fetch
+> > > - [ ] Part 8.4 - Paytm Frontend
+>
+> > [!todo]- Week 9 - Typescript
+> > > - [ ] Part 9.1 - Custom Hooks
+> > > - [ ] Part 9.2 - Typescript Intro
+> > > - [ ] Part 9.3 - Typescript Generics, enums, imports, exports
+>
+> > [!todo]- Week 10 - Postgres and Prisma
+> > > - [ ] Part 10.0.1 - Cohort 1 - Postgres
+> > > - [ ] Part 10.0.2 - Cohort 1 - Prisma
+> > > - [ ] Part 10.1 - Postgres
+> > > - [ ] Part 10.2 - Prisma
+>
+> > [!todo]- Week 11 - Deployment
+> > > - [ ] Part 11.1 - Serverless Functions
+> > > - [ ] Part 11.2 - Deploying to AWS
+> > > - [ ] Part 11.3 - Certificate Management
+>
+> > [!todo]- Week 12 - Severless and Database
+> > > - [ ] Part 12.1 - Deploying Frontends on AWS
+> > > - [ ] Part 12.2 - Typescript Advance APIs
+> > > - [ ] Part 12.3 - Actionable Docker to start packages
+> > > - [ ] Part 12.4 - SQL Joins and Relationships
+> > > - [ ] Part 12.5 - Prisma Recap, Relationships in Prisma
+> > > - [ ] Part 12.6 - Connection Pooling in serverless environments
+>
+> > [!todo]- Week 13 - Blogging app
+> > > - [ ] Part 13.1 - Project (Local Recording)
+> > > - [ ] Part 13.2 - AMA Session
+> > > - [ ] Part 13.3 - Offline - Backend of Blogging App
+> > > - [ ] Part 13.4 - Frontend of Blogging App
+>
+> > [!todo]- Week 14 - NextJS
+> > > - [ ] Part 14.1 - NextJS Intro
+> > > - [ ] Part 14.2 - NextJS Backend
+> > > - [ ] Part 14.3 - NextJS Backend (offline)
+>
+> > [!todo]- Week 15 - Docker
+> > > - [ ] Part 15.1 - Docker Part 1
+> > > - [ ] Part 15.2 - Docker Part 2
+> > > - [ ] Part 15.3 - Docker compose, exec command, docker push command
+> > > - [ ] Part 15.4 - Bind mounts
+>
+> > [!todo]- Week 16 - Monorepo
+> > > - [ ] Part 16.1 - Monorepo Part 1
+> > > - [ ] Part 16.2 - Monorepo Part 2
+> > > - [ ] Part 16.3 - Authentication using cookies
+> > > - [ ] Part 16.4 - NextAuth
+>
+> > [!todo]- Week 17, 18 - Paytm
+> > > - [ ] Part 17.1 - Paytm Part 1
+> > > - [ ] Part 17.2 - Paytm Part 2
+> > > - [ ] Part 18.1.1 - Paytm Part 3
+> > > - [ ] Part 18.1.2 - Paytm Part 3 (continuation)
+> > > - [ ] Part 18.2 - CI/CD
+>
+> > [!todo]- Week 19 - Advance Backend
+> > > - [ ] Part 19.0.1 - Middlewares in NextJS
+> > > - [ ] Part 19.0.2 - CSR vs SSR vs SSG
+> > > - [ ] Part 19.1 - WebSockets and advanced backend communication
+> > > - [ ] Part 19.2 - Redis, Pub/Sub, Queues
+> > > - [ ] Websockets | Cohort 3
+> > > - [ ] WebSockets Project - Chat app | Cohort 3
+>
+> > [!todo]- Week 20 - 1->100 Cohort
+> > > - [ ] Part 20.0 - 1->100 Orientation, setting up cms/daily
+> > > - [ ] Part 20.1 - OpenAPI Spec (offline)
+> > > - [ ] Part 20.3 - OpenAPI Spec (Cohort 1)
+>
+> > [!todo]- Week 21 - DDOS, Captcha, Pub/Sub
+> > > - [ ] Part 21.1 - Rate limitting, DDOS, Captcha
+> > > - [ ] Part 21.2 - Singleton pattern +  Pub/Sub
+>
+> > [!todo]- Week 22 - Advanced Database
+> > > - [ ] Part 22.1 - Capacity estimation, Horizontal and Vertical scaling, Scaling NodeJS, and ASGs
+> > > - [ ] Part 22.2 - Auto Scaling Groups
+> > - [ ] Part 22.3 - Indexing in databases
+> > - [ ] Part 22.4 - Normalization in Databases
+>
+> > [!todo]- Week 23 - WebRTC
+> > > - [ ] Part 23.1 - WebRTC
+> > > - [ ] Part 23.2 - WebRTC, setting up projects, 0-1 firewall
+>
+> > [!todo]- Week 24 - GRPC
+> > > - [ ] Part 24.1 - GRPC
+> > > - [ ] Part 24.2 - Testing in MERN stack
+> > > - [ ] Part 24.3 - Testing from start (offline)
+>
+> > [!todo]- Week 25 - Integration and end to end tests
+> > > - [ ] Part 25.1 - Integration and end to end tests
+>
+> > [!todo]- Week 26 - Prometheus and Grafana
+> > > - [ ] Part 26.1 - Monitoring, Logging and Newrelic
+> > > - [ ] Part 26.2 - Prometheus and Grafana
+> > > - [ ] Part 26.3 - Monitoring using Prometheus and Grafana Part 1
+> > > - [ ] Part 26.4 - Monitoring using Prometheus and Grafana Part 2
+>
+> > [!todo]- Week 27, 28, 29 - Kubernetes
+> > > - [ ] Part 27.1 - Kubernetes Part 1
+> > > - [ ] Part 27.2 - Kubernetes Part 2
+> > > - [ ] Part 28.1 - Kubernetes Part 3
+> > > - [ ] Part 28.2 - Kubernetes Part 4
+> > > - [ ] Part 29.1 - Kubernetes Part 5 (Volumes, PV, PVCs)
+> > > - [ ] Part 29.2 - Kubernetes Part 6 (HPA, Node Autoscaling)
+>
+> > [!todo]- Week 30, 31 - Exchange Project
+> > > - [ ] Part 30.1 - Exchange Project Part 1
+> > > - [ ] Part 30.2 - Exchange Project Part 2
+> > > - [ ] Part 31.1 - Exchange Project Part 3 (Backend)
+> > > - [ ] Part 31.2 - Exchange Project Part 4 (Scalable Websocket App)
+>
+> > [!todo]- Week 32 - Kafka
+> > > - [ ] Part 32.1 - Kafka
+> > > - [ ] Part 32.2 - Docker swarm, container orchestration
+>
+> > [!todo]- Week 33 - Zapier
+> > > - [ ] Part 33.1 - Zapier Part 1
+> > > - [ ] Part 33.2 - Zapier Part 2
+> > > - [ ] Part 33.3 - Zapier Part 3 (Primary Backend)
+> > > - [ ] Part 33.4 - Zapier Frontend (Auth and landing page)
+> > > - [ ] Part 33.5 - Zapier Frontend Continuation (Zap and Zap page)
+> > > - [ ] Part 34.1 - Zapier Setup, AMA (live)
+> > > - [ ] Part 34.2 - Zapier finishing Frontend and Backend
+> > > - [ ] Part 34.3 - Live Open Source Contribution
+> > > - [ ] Part 34.4 - Zapier - Sending Emails and Solana via workers
+>
+> > [!todo]- Week 35 - Adhoc
+> > > - [ ] Part 35.1 - Adhoc Coding - Paytm Merchant App
+> > > - [ ] Part 35.2 - AMA on Zoom
 
 -------------------
 
-# Cohort 2 - Web 3
+# Cohort 3 - Web 3
 
 > [!todo]- Web 3
 >
@@ -999,7 +1190,7 @@
 
 ------------
 
-# Cohort 3 - AIML
+# Cohort 4 - AIML
 
 > [!todo]- React Native
 > > - [ ] Day 1
