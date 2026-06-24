@@ -1,12 +1,44 @@
 
+> [!note]
+> `![success]` to mark complete - shows green
+> `![todo]` to mark pending - shows blue
+> `![warning]` - shows yellow
+> `![bug]` - shows red
+> `![question]` - shows purple
+
+
 - [ ] RegEx
 - [ ] Bash
 
 ---------------------
 
 > [!todo]- Reverse Engineering
+> > [!todo]- Practical Way
+> > > - [ ] godbolt and dogbolt website
+> > > - [ ] Cheat Engine :- Game Hacking
+> > > - [ ] Crack Me challenges :- crackmes.one; windows challenges -> x64dbg
+> > > - [ ] Tools:- x64dbg (dynamic analysis on Windows), Ghidra (static analysis), IDA free, Radare2 (linux)
+> > > - [ ] Malware Analysis on vm, malware samples from malware bazaar or zoo repository
+> > > - [ ] ProcessHacker (for process tracking), ProcMon (for file and registry monitoring), Wireshark (for network monitoring), Ghidra (binary)
+> > > - [ ] x86 and x64 Assembly
+> > > - [ ] picoCTF, HacktheBox, TryHackMe, CTFTime,
+> > > - [ ] Common Protection Techniques (DEP, ASLR, Stack Canaries, Code Obfuscation, Packing with UPX)
+> > > - [ ] Detect It Easy ( for packer detection)
+> > > - [ ] You own CrackMe challenge ( License Key Checker ), Add checks for anti-debugging, timming, and obsfuscate string usin XOR encoding, Custom encryption
 >
-> > [!todo]- ARM
+> > [!todo]- Reverse Engineering 101 (Laurie Wired)
+> > > - [ ] Programming Basics :- Project in C++
+> > > - [ ] Assembly Code :- x86 Assembly and ARM Assembly
+> > > - [ ] Windows Reverse Engineering
+> > > - [ ] Read Practical Malware Analysis
+> > > - [ ] Analysis Tools :- Gedra or IDA Pro and S-trace
+> > > - [ ] Dynamic Analysis :- x64 debug alnalysis for windows application
+> > > - [ ] Obfuscation Techniques :- Anti-Debug, Anti-Emulation
+> > > - [ ] Platform Specific
+> > > - [ ] Malware Analysis
+> > > - [ ] x64 for Windows and Linux Reverse Engineering
+>
+> > [!success]- ARM (Laurie Wired)
 > > - [x] MOV, Exit, Syscall
 > > - [x] ADD, SUB, MUL, set CPSR
 > > - [x] LDR, STR
