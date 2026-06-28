@@ -10,6 +10,38 @@
 - [ ] RegEx
 - [ ] Bash
 
+> [!todo]- Git
+> > [!Success]- Setup
+> > > - [X] Git
+> > > - [X] Install Git
+> > > - [X] Command Syntax
+> > > - [x] RTFM
+> > > - [x] Porcelain and Plumbing
+> > > - [x] Quick Config
+>
+> > [!Success]- Reposirories
+> > > - [x] Config
+> > > - [x] Status
+> > > - [x] Staging
+> > > - [x] Commit
+> > > - [x] Half of Git
+> > > - [x] Git Log
+>
+> > [!Success]- Internals
+> > > - [x] Different hashes
+> > > - [x] The plumbing
+> > > - [x] The object file
+> > >  - [ ] The cat file
+> > >  - [ ] Trees and blobs
+> > > - [ ] Second Commit
+> > > - [ ] Storing Data
+>
+> > [!todo]- Config
+> > > - [x] Git Config
+> > > - [x] Get
+> > > - [x] Unset
+> > > - [x] Duplicates
+
 ---------------------
 
 > [!todo]- Reverse Engineering
