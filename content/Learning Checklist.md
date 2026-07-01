@@ -31,16 +31,157 @@
 > > > - [x] Different hashes
 > > > - [x] The plumbing
 > > > - [x] The object file
-> > >  - [ ] The cat file
-> > >  - [ ] Trees and blobs
-> > > - [ ] Second Commit
-> > > - [ ] Storing Data
+> > > - [x] The cat file
+> > > - [x] Trees and blobs
+> > > - [x] Second Commit
+> > > - [x] Storing Data
 >
-> > [!todo]- Config
+> > [!success]- Config
 > > > - [x] Git Config
 > > > - [x] Get
 > > > - [x] Unset
 > > > - [x] Duplicates
+> > > - [x] Removing a section
+> > > - [x] Locations
+>
+> > [!success]- Branching
+> > > - [x] What is a branch
+> > > - [x] Default branch
+> > > - [x] Visualizing Branches
+> > > - [x] New Branch
+> > > - [x] Switching Branches
+> > > - [x] Upleveling Our Abilities
+> > > - [x] log flags
+> > > - [x] git files
+>
+> > [!todo]- Merge
+> > > - [ ] Merge
+> > > - [ ] Merge Commits
+> > > - [ ] Merge Logs
+> > > - [ ] Fast-Forward Merge
+> > > - [ ] Fast-Forward Commit
+>
+> > [!todo]- Rebase
+> > > - [ ] Rebase
+> > > - [ ] New Branch
+> > > - [ ] Run Rebase
+> > > - [ ] When to Rebase
+>
+> > [!todo]- Reset
+> > > - [ ] Undoing Changes
+> > > - [ ] Git Reset Soft
+> > > - [ ] Git Reset Hard
+> > > - [ ] Danger
+>
+> > [!todo]- Remote
+> > > - [ ] Git Remote
+> > > - [ ] Adding a Remote
+> > > - [ ] Fetch
+> > > - [ ] Making Fetch Happen
+> > > - [ ] Not Fetched
+> > > - [ ] Log Remote
+> > > - [ ] Merge
+>
+> > [!todo]- Github
+> > > - [ ] Github Repository
+> > > - [ ] Github Repo
+> > > - [ ] Github Push
+> > > - [ ] Pull
+> > > - [ ] Pull Requests
+> > > - [ ] My Workflow
+> > > - [ ] Merge Pull Request
+>
+> > [!todo]- Gitignore
+> > > - [ ] Gitignore
+> > > - [ ] Nested Gitignore
+> > > - [ ] Patterns
+> > > - [ ] What to Ignore
+>
+> > [!todo]- Fork
+> > > - [ ] Welcome to git
+> > > - [ ] Creating a fork
+> > > - [ ] What is a fork
+> > > - [ ] Clone Megacorp
+> > > - [ ] Disable RERERE
+> > > - [ ] PRs from a Fork
+>
+> > [!todo]- Head
+> > > - [ ] Reflog
+> > > - [ ] Delete Branch
+> > > - [ ] Recovery
+> > > - [ ] Merge
+>
+> > [!todo]- Merge Conflicts
+> > > - [ ] Conflicting Changes
+> > > - [ ] Merge Conflicts
+> > > - [ ] Merge
+> > > - [ ] Edit the File
+> > > - [ ] Resolution
+> > > - [ ] Conflict Quiz
+> > > - [ ] Back to main
+> > > - [ ] Ours and Theirs
+> > > - [ ] Multi-conflict
+> > > - [ ] Checkout Conflict
+> > > - [ ] No Merge Commits
+>
+> > [!todo]- Rebase Conflicts
+> > > - [ ] Rebase Conflicts
+> > > - [ ] Make the conflict
+> > > - [ ] Resolve the conflict
+> > > - [ ] Deleted Commit
+> > > - [ ] Cleanup
+> > > - [ ] Repeat Resolution Setup
+> > > - [ ] RERERE
+> > > - [ ] Merge Back In
+> > > - [ ] Accidental Commit
+>
+> > [!todo]- Squashing
+> > > - [ ] Squashing
+> > > - [ ] How to Squash
+> > > - [ ] Overwrite
+> > > - [ ] Force Push
+> > > - [ ] Squashing Is Scary
+> > > - [ ] Squashing PRs
+> > > - [ ] Squash Series
+> > > - [ ] Pull Request
+> > > - [ ] Merge the Pull Request
+>
+> > [!todo]- Stash
+> > > - [ ] Stash
+> > > - [ ] Pop
+> > > - [ ] What Is the Stash
+> > > - [ ] Multiple Stashes
+> > > - [ ] Unrelated Commit
+> > > - [ ] Pop Again
+>
+> > [!todo]- Revert
+> > > - [ ] Revert
+> > > - [ ] Diff
+> > > - [ ] Revert vs. Reset
+>
+> > [!todo]- Cherry Pick
+> > > - [ ] Cherry Pick
+> > > - [ ] How to Cherry Pick
+>
+> > [!todo]- Bisect
+> > > - [ ] Bisect
+> > > - [ ] How to Bisect
+> > > - [ ] That Was Annoying
+>
+> > [!todo]- Worktrees
+> > > - [ ] Worktrees
+> > > - [ ] Linked Worktrees
+> > > - [ ] No Duplicate Branches
+> > > - [ ] Tracking
+> > > - [ ] Upstream
+> > > - [ ] Delete Worktrees
+>
+> > [!todo]- Tags
+> > > - [ ] Tags
+> > > - [ ] Semver
+> > > - [ ] Conventional Tags
+
+
 
 ---------------------
 
