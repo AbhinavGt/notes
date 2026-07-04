@@ -54,75 +54,75 @@
 > > > - [x] log flags
 > > > - [x] git files
 >
-> > [!todo]- Merge
-> > > - [ ] Merge
-> > > - [ ] Merge Commits
-> > > - [ ] Merge Logs
-> > > - [ ] Fast-Forward Merge
-> > > - [ ] Fast-Forward Commit
+> > [!success]- Merge
+> > > - [x] Merge
+> > > - [x] Merge Commits
+> > > - [x] Merge Logs
+> > > - [x] Fast-Forward Merge
+> > > - [x] Fast-Forward Commit
 >
-> > [!todo]- Rebase
-> > > - [ ] Rebase
-> > > - [ ] New Branch
-> > > - [ ] Run Rebase
-> > > - [ ] When to Rebase
+> > [!success]- Rebase
+> > > - [x] Rebase
+> > > - [x] New Branch
+> > > - [x] Run Rebase
+> > > - [x] When to Rebase
 >
-> > [!todo]- Reset
-> > > - [ ] Undoing Changes
-> > > - [ ] Git Reset Soft
-> > > - [ ] Git Reset Hard
-> > > - [ ] Danger
+> > [!success]- Reset
+> > > - [x] Undoing Changes
+> > > - [x] Git Reset Soft
+> > > - [x] Git Reset Hard
+> > > - [x] Danger
 >
-> > [!todo]- Remote
-> > > - [ ] Git Remote
-> > > - [ ] Adding a Remote
-> > > - [ ] Fetch
-> > > - [ ] Making Fetch Happen
-> > > - [ ] Not Fetched
-> > > - [ ] Log Remote
-> > > - [ ] Merge
+> > [!success]- Remote
+> > > - [x] Git Remote
+> > > - [x] Adding a Remote
+> > > - [x] Fetch
+> > > - [x] Making Fetch Happen
+> > > - [x] Not Fetched
+> > > - [x] Log Remote
+> > > - [x] Merge
 >
-> > [!todo]- Github
-> > > - [ ] Github Repository
-> > > - [ ] Github Repo
-> > > - [ ] Github Push
-> > > - [ ] Pull
-> > > - [ ] Pull Requests
-> > > - [ ] My Workflow
-> > > - [ ] Merge Pull Request
+> > [!success]- Github
+> > > - [x] Github Repository
+> > > - [x] Github Repo
+> > > - [x] Github Push
+> > > - [x] Pull
+> > > - [x] Pull Requests
+> > > - [x] My Workflow
+> > > - [x] Merge Pull Request
 >
-> > [!todo]- Gitignore
-> > > - [ ] Gitignore
-> > > - [ ] Nested Gitignore
-> > > - [ ] Patterns
-> > > - [ ] What to Ignore
+> > [!success]- Gitignore
+> > > - [x] Gitignore
+> > > - [x] Nested Gitignore
+> > > - [x] Patterns
+> > > - [x] What to Ignore
 >
-> > [!todo]- Fork
-> > > - [ ] Welcome to git
-> > > - [ ] Creating a fork
-> > > - [ ] What is a fork
-> > > - [ ] Clone Megacorp
-> > > - [ ] Disable RERERE
-> > > - [ ] PRs from a Fork
+> > [!success]- Fork
+> > > - [x] Welcome to git
+> > > - [x] Creating a fork
+> > > - [x] What is a fork
+> > > - [x] Clone Megacorp
+> > > - [x] Disable RERERE
+> > > - [x] PRs from a Fork
 >
-> > [!todo]- Head
-> > > - [ ] Reflog
-> > > - [ ] Delete Branch
-> > > - [ ] Recovery
-> > > - [ ] Merge
+> > [!success]- Head
+> > > - [x] Reflog
+> > > - [x] Delete Branch
+> > > - [x] Recovery
+> > > - [x] Merge
 >
-> > [!todo]- Merge Conflicts
-> > > - [ ] Conflicting Changes
-> > > - [ ] Merge Conflicts
-> > > - [ ] Merge
-> > > - [ ] Edit the File
-> > > - [ ] Resolution
-> > > - [ ] Conflict Quiz
-> > > - [ ] Back to main
-> > > - [ ] Ours and Theirs
-> > > - [ ] Multi-conflict
-> > > - [ ] Checkout Conflict
-> > > - [ ] No Merge Commits
+> > [!success]- Merge Conflicts
+> > > - [x] Conflicting Changes
+> > > - [x] Merge Conflicts
+> > > - [x] Merge
+> > > - [x] Edit the File
+> > > - [x] Resolution
+> > > - [x] Conflict Quiz
+> > > - [x] Back to main
+> > > - [x] Ours and Theirs
+> > > - [x] Multi-conflict
+> > > - [x] Checkout Conflict
+> > > - [x] No Merge Commits
 >
 > > [!todo]- Rebase Conflicts
 > > > - [ ] Rebase Conflicts
