@@ -77,6 +77,7 @@ Changes to be committed:
 	- `git commit -m "your message here"`
 - If you screw up a commit message, you can change it with the `--amend` flag.
 	- `git commit --amend -m "A: add contents.md"`
+	- 
 
 # Git log
 - A Git repo is a (potentially very long) list of commits, where each commit represents the _full state of the repository_ at a given point in time.
@@ -497,13 +498,8 @@ Date:   Wed Jun 24 13:53:49 2026 +0530
 ```
 ## log flags
 - There are a few flags that can make the output easier to read.
-- The first is `--decorate`. It can be one of:
-	- `short` (the default)
-	- `full` (shows the full ref name)
-	- `no` (no decoration)
+- Like `--decorate`, etc.
 - A ref is just a pointer to a commit. All branches are refs, but not all refs are branches.
-- `--oneline` flag will show you a more compact view of the log
-
 ```bash
 ➜  webflyx git:(add_classics) git log --decorate=full
 
@@ -645,6 +641,40 @@ Merge made by the 'ort' strategy.
 - The next two lines are just "normal" commits, each pointing to their parent.
 - The last line is the initial commit and therefore has no parent.
 
+```bash
+➜  megacorp git:(main) ✗ git --no-pager log --oneline --decorate --graph --parents
+* 28afcf9 751ae77 (HEAD -> main, tag: v1.0.0, tag: candidate, ultracorp) P: Reverting to J
+* 751ae77 68dce1e O: Partners.txt Change1
+* 68dce1e 9fa17df N : Revert M
+* 9fa17df e351395 M: Stashed Changes
+* e351395 f77c7bd L: Updated apux.sh
+*   f77c7bd 0999d72 2ec8850 (origin/main, origin/HEAD) Merge pull request #1 from AbhinavGt/add_scanner
+|\
+| * 2ec8850 0999d72 (origin/add_scanner) K: Squashed K,L,M commits
+|/
+* 0999d72 f760d04 J: redacted
+*   f760d04 a63ba0e 58cef71 H: Resolved multi-conflict
+|\
+| * 58cef71 0ef8127 F: Multi-conflict del_rec
+* | a63ba0e 0ef8127 G: Multi-conflict main
+|/
+*   0ef8127 9fcf449 119e1d9 E: fine, Greg can have this one
+|\
+| * 119e1d9 20b7194 D: add jayson to customers
+* | 9fcf449 20b7194 C: update customers and partners
+|/
+* 20b7194 0d16f95 B: recovery
+* 0d16f95 A: The Founding of MegaCorp and the End of Art
+```
+- Git log flag"
+	- The first is `--decorate`. It gives the branch and tag information. Lets you see how far you are away from a branch or how far the previous branch might be.
+		- It can be one of:
+			- `short` (the default)
+			- `full` (shows the full ref name)
+			- `no` (no decoration)
+- `--oneline` flag will show you a more compact view of the log. Hashes are short to 7 characters minimum. Along with commit message
+- `--graph` will draw all the lines to see how your commits diverge and merge
+- `--parents` will give you parent commit upon every other commit. These are useful for merge commit because you can see where the two parents came from to create the merge commit
 ##  Fast Forward Merge
 
 - The simplest type of merge is a fast-forward merge.
@@ -728,6 +758,7 @@ Fast-forward
 	- It allows for a fast-forward merge into main. It also allows you to maintain a merge commit free history
 - Rebase helps you take diverging commits from one branch and move them to the tip of the base branch that the feature branch is based on. 
 - It allows for no merge commit. It simply replays the commits from `feature` on top of `main` for a clean history.
+- It is recommend to use rebase  because it allow for a merge commit free history which make some of the advance git features to be more easily useable
 ## Rebasing a new branch
 - We can use the git switch command to create and switch to a new branch called `update_dune` but branch off of the `D` commit.
 	- `git switch -c update_dune COMMITHASH`
@@ -737,7 +768,7 @@ Fast-forward
 
 Switched to a new branch 'update_dune'
 
-➜  webflyx git:(update_dune) git log --oneline -n 1
+	➜  webflyx git:(update_dune) git log --oneline -n 1
 d828067 (HEAD -> update_dune) D: added_classics
 ```
 

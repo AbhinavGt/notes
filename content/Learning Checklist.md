@@ -1,11 +1,4 @@
-
-> [!note]
-> `![success]` to mark complete - shows green
-> `![todo]` to mark pending - shows blue
-> `![warning]` - shows yellow
-> `![bug]` - shows red
-> `![question]` - shows purple
-
+Check [[Citations]] for color scheme
 
 - [ ] RegEx
 - [ ] Bash
@@ -1561,4 +1554,32 @@
 > > > - [ ] Part 23.2 - Linked List II
 
 -------------
+
+> [!example]- Nonsense
+> > [!quote]- Build Your Own
+> > > - [ ] OS
+> > > - [ ] Database
+> > > - [ ] VM
+> > > - [ ] Web Server
+> > > - [ ] Game Engine
+> > > - [ ] Compiler
+> > > - [ ] Programming Language
+> > > - [ ] Browser
+> > > - [ ] Blockchain
+> > > - [ ] Encryption Algo
+> > > - [ ] CPU Emulator
+> > > - [ ] File System
+> > > - [ ] Container Runtime
+> > > - [ ] Package Manager
+> > > - [ ] Shell
+> > > - [ ] Window Manager
+> > > - [ ] GUI Toolkit
+> > > - [ ] Text Editor
+> > > - [ ] IDE
+> > > - [ ] Version Control
+> > > - [ ] Network Protocol
+> > > - [ ] OS Kernel in assembly
+> > > - [ ] Scheduler
+> > > - [ ] Memory Allocator
+> > > - [ ] Hypervisor
 
