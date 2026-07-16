@@ -1,10 +1,11 @@
 Check [[Citations]] for color scheme
 
-- [ ] RegEx
+- [x] RegEx
 - [ ] Bash
+# Boot.dev
 
-> [!todo]- Git
-> > [!Success]- Setup
+> [!success]- Git
+> > [!success]- Setup
 > > > - [X] Git
 > > > - [X] Install Git
 > > > - [X] Command Syntax
@@ -12,7 +13,7 @@ Check [[Citations]] for color scheme
 > > > - [x] Porcelain and Plumbing
 > > > - [x] Quick Config
 >
-> > [!Success]- Reposirories
+> > [!success]- Reposirories
 > > > - [x] Config
 > > > - [x] Status
 > > > - [x] Staging
@@ -20,7 +21,7 @@ Check [[Citations]] for color scheme
 > > > - [x] Half of Git
 > > > - [x] Git Log
 >
-> > [!Success]- Internals
+> > [!success]- Internals
 > > > - [x] Different hashes
 > > > - [x] The plumbing
 > > > - [x] The object file
@@ -117,62 +118,62 @@ Check [[Citations]] for color scheme
 > > > - [x] Checkout Conflict
 > > > - [x] No Merge Commits
 >
-> > [!todo]- Rebase Conflicts
-> > > - [ ] Rebase Conflicts
-> > > - [ ] Make the conflict
-> > > - [ ] Resolve the conflict
-> > > - [ ] Deleted Commit
-> > > - [ ] Cleanup
-> > > - [ ] Repeat Resolution Setup
-> > > - [ ] RERERE
-> > > - [ ] Merge Back In
-> > > - [ ] Accidental Commit
+> > [!success]- Rebase Conflicts
+> > > - [x] Rebase Conflicts
+> > > - [x] Make the conflict
+> > > - [x] Resolve the conflict
+> > > - [x] Deleted Commit
+> > > - [x] Cleanup
+> > > - [x] Repeat Resolution Setup
+> > > - [x] RERERE
+> > > - [x] Merge Back In
+> > > - [x] Accidental Commit
 >
-> > [!todo]- Squashing
-> > > - [ ] Squashing
-> > > - [ ] How to Squash
-> > > - [ ] Overwrite
-> > > - [ ] Force Push
-> > > - [ ] Squashing Is Scary
-> > > - [ ] Squashing PRs
-> > > - [ ] Squash Series
-> > > - [ ] Pull Request
-> > > - [ ] Merge the Pull Request
+> > [!success]- Squashing
+> > > - [x] Squashing
+> > > - [x] How to Squash
+> > > - [x] Overwrite
+> > > - [x] Force Push
+> > > - [x] Squashing Is Scary
+> > > - [x] Squashing PRs
+> > > - [x] Squash Series
+> > > - [x] Pull Request
+> > > - [x] Merge the Pull Request
 >
-> > [!todo]- Stash
-> > > - [ ] Stash
-> > > - [ ] Pop
-> > > - [ ] What Is the Stash
-> > > - [ ] Multiple Stashes
-> > > - [ ] Unrelated Commit
-> > > - [ ] Pop Again
+> > [!success]- Stash
+> > > - [x] Stash
+> > > - [x] Pop
+> > > - [x] What Is the Stash
+> > > - [x] Multiple Stashes
+> > > - [x] Unrelated Commit
+> > > - [x] Pop Again
 >
-> > [!todo]- Revert
-> > > - [ ] Revert
-> > > - [ ] Diff
-> > > - [ ] Revert vs. Reset
+> > [!success]- Revert
+> > > - [x] Revert
+> > > - [x] Diff
+> > > - [x] Revert vs. Reset
 >
-> > [!todo]- Cherry Pick
-> > > - [ ] Cherry Pick
-> > > - [ ] How to Cherry Pick
+> > [!success]- Cherry Pick
+> > > - [x] Cherry Pick
+> > > - [x] How to Cherry Pick
 >
-> > [!todo]- Bisect
-> > > - [ ] Bisect
-> > > - [ ] How to Bisect
-> > > - [ ] That Was Annoying
+> > [!success]- Bisect
+> > > - [x] Bisect
+> > > - [x] How to Bisect
+> > > - [x] That Was Annoying
 >
-> > [!todo]- Worktrees
-> > > - [ ] Worktrees
-> > > - [ ] Linked Worktrees
-> > > - [ ] No Duplicate Branches
-> > > - [ ] Tracking
-> > > - [ ] Upstream
-> > > - [ ] Delete Worktrees
+> > [!success]- Worktrees
+> > > - [x] Worktrees
+> > > - [x] Linked Worktrees
+> > > - [x] No Duplicate Branches
+> > > - [x] Tracking
+> > > - [x] Upstream
+> > > - [x] Delete Worktrees
 >
-> > [!todo]- Tags
-> > > - [ ] Tags
-> > > - [ ] Semver
-> > > - [ ] Conventional Tags
+> > [!success]- Tags
+> > > - [x] Tags
+> > > - [x] Semver
+> > > - [x] Conventional Tags
 
 
 
@@ -763,8 +764,6 @@ Check [[Citations]] for color scheme
 > > > - [ ] Interview Frameworks
 
 ------------------
-
-
 # Cohort 2 - Full Stack
 
 > [!todo]- Harnoor's Android
@@ -996,8 +995,6 @@ Check [[Citations]] for color scheme
 > > > - [ ] Lecture 1.2 - Processing Data
 > > > - [ ] Lecture 1.3 - Training of Model
 > > > - [ ] Lecture 1.4 - Model Tuning
-
-
 
 > [!todo]- Full Stack
 > > [!todo]- Week 0 - Introduction
@@ -1406,8 +1403,6 @@ Check [[Citations]] for color scheme
 > [!todo]- Rishi's Fronent
 > > - [ ] Rishi's Frontend Session
 
-
-
 > [!todo]- AIML
 > > [!todo]- Week 0 - Orientation
 > > > - [ ] Part 0.0 - Orientation and Warming Up
@@ -1474,8 +1469,6 @@ Check [[Citations]] for color scheme
 >
 > > [!todo]- Week 23 - Hugging Face
 > > > - [ ] Part 23.0 - Hugging Face end to end
-
-
 
 > [!todo]- DSA
 > > [!todo]- Week 0 - Orientation

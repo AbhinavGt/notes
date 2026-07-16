@@ -310,6 +310,26 @@ https://website.com/html5-features.`html`
 /html$/gm
 ```
 
+## Word Boundary `\b`
+- Matches the word character or position at the end of a word.
+
+```
+Regex can be used in programming languages such as Python, SQL, JavaScript
+
+Regex ca`n` be used i`n` programming languages such as Pytho`n`, SQL, JavaScript
+/n\b/g
+```
+
+## Not Word Boundary `\B`
+- Matches a word character or position that is not at the end of a word.
+
+```
+You can easily manage your data with Regex, which uses commands like finding, matching, and editing
+
+You can easily ma`n`age your data with Regex, which uses comma`n`ds like fi`n`di`n`g, matchi`n`g, and editi`n`g
+/n\B/g
+```
+
 # Characters
 ## Word Character `\w`: Letter, Number and Underscore
 - The expression `\w` is used to find letters, numbers and underscore characters
@@ -493,4 +513,216 @@ ber beer beeer beeeer
 
 `ber` beer beeer beeeer
 /.*?r/
+```
+# Regex for SEO
+-  The advantages of using Regex for SEO are that it makes it easier to analyze big data and write richer filters
+- You can use Regex for SEO on platforms such as Google Analytics, Google Data Studio, Google Sheets, Google Search Console, Ahrefs, Deepcrawl, Screaming Frog. It is also frequently used in .htaccess and robots.txt (regex-like syntax) files.
+## Or Operator `|`
+- We use the Or operator `|` to filter out multiple expressions. 
+
+Filter text containing `seo` and `regex` by writing the two words, separating them with the Or operator `|`
+
+```
+regex
+seo
+regular expression
+
+`regex`
+`seo`
+regular expression
+seo|regex
+```
+
+## Optional Operator `?`
+- We use it to express that an expression or character is optional. 
+
+In this example, the letter `s` is optional. Instead, add a question mark `?` to the end of the letter s.
+
+```
+what is http
+what is https
+what is html
+
+what is `http`
+what is `https`
+what is html
+https?
+```
+
+## Anything `.*`
+- In regex, the period `.` can match anything, including spaces. But this match is only for a single character where it is used. 
+- The asterisk character `*` means that the preceding item does not exist at all or occurs more than once in the text. 
+- When the two are used together, it means that there can be an element of unlimited length where used.
+
+Add `.*` to the end of the regex to write the expression that starts with how to write and matches everything after it
+
+```
+how to write regex
+how to write regexp
+how to write book review
+
+`how to write regex`
+`how to write regexp`
+`how to write book review`
+how to write .*
+```
+
+## Contains
+ - To filter the text that contains the words or phrases we're looking for, we write the word we're looking for between our two phrases `.*` that match everything. 
+
+type `.*buy.*` to filter out what includes buy.
+```
+what is regex?
+i want to buy a boat
+how to buy a new phone
+
+what is regex?
+`i want to buy a boat`
+`how to buy a new phone`
+.*buy.*
+```
+
+## Negated Character Sets `[^abc]`
+- We use the negated character sets `[^]` to denote characters we don't want to be included. 
+- The characters we do not want to be included are written in square brackets with a caret at the beginning.
+
+Since http occurs in both, it will also choose https. Type `[^s]` after the letter p to exclude the letter s.
+```
+1. http://testdomain.com
+2. https://testdomain.com
+
+. `http://testdomain.com`
+. https://testdomain.com
+http[^s].*
+```
+
+## Caret Sign `^`
+- Let's say we have a list of URLs, and we want to find only those URLs that start with http.
+- But URLs also contain http in different parts other than their beginning
+
+add a caret `^` to the beginning of the following expression to filter out only those starting with http.
+```
+http://www.google.com/search?q=https
+https://developer.mozilla.org/en-US/docs/Glossary/http
+http://httpstatus.io/
+https://ahrefs.com/
+
+`http://www.google.com/search?q=https`
+https://developer.mozilla.org/en-US/docs/Glossary/http
+`http://httpstatus.io/`
+https://ahrefs.com/
+^http[^s].*
+```
+
+## Dollar Sign `$` and Escape Character `\`
+- We want to find only those URLs ending in `.htm`.
+- Since the period `.` is a special character that matches everything, we first need to disable the period before `htm` using the escape character `\`. This applies to all special characters.
+- Then add a `$` sign to the end of the expression.
+- This ensures that the text to be filtered ends with the expression written before it.
+
+```
+https://www.google.com/search?hl=en&q=html
+https://testsite.com/learn-html.htm
+https://developer.mozilla.org/en-US/docs/Web/html
+https://learnhtmltestsite.com/learn.html
+
+https://www.google.com/search?hl=en&q=html
+`https://testsite.com/learn-html.htm`
+https://developer.mozilla.org/en-US/docs/Web/html
+https://learnhtmltestsite.com/learn.html
+.*\.htm$
+```
+## Length Restrictions `{n}`
+- We may want to filter the results by character lengths. 
+
+to filter URLs that are 35 characters long
+```
+https://ahrefs.com/dashboard
+https://ahrefs.com/site-explorer
+https://ahrefs.com/keywords-explorer
+https://ahrefs.com/site-audit
+https://ahrefs.com/rank-tracker
+https://ahrefs.com/content-explorer
+
+https://ahrefs.com/dashboard
+https://ahrefs.com/site-explorer
+https://ahrefs.com/keywords-explorer
+https://ahrefs.com/site-audit
+https://ahrefs.com/rank-tracker
+`https://ahrefs.com/content-explorer`
+^.{35}$
+```
+## Length Restrictions (Maximum) `{n,m}`
+
+To filter URLs with a maximum length of 35
+```
+https://ahrefs.com/dashboard
+https://ahrefs.com/site-explorer
+https://ahrefs.com/keywords-explorer
+https://ahrefs.com/site-audit
+https://ahrefs.com/rank-tracker
+https://ahrefs.com/content-explorer
+
+`https://ahrefs.com/dashboard`
+`https://ahrefs.com/site-explorer`
+https://ahrefs.com/keywords-explorer
+`https://ahrefs.com/site-audit`
+`https://ahrefs.com/rank-tracker`
+`https://ahrefs.com/content-explorer`
+^.{1,35}$
+```
+
+## Length Restrictions (Minumum) `{n,}`
+
+To filter URLs with a minimum length of 35 characters,
+```
+https://ahrefs.com/dashboard
+https://ahrefs.com/site-explorer
+https://ahrefs.com/keywords-explorer
+https://ahrefs.com/site-audit
+https://ahrefs.com/rank-tracker
+https://ahrefs.com/content-explorer
+
+https://ahrefs.com/dashboard
+https://ahrefs.com/site-explorer
+`https://ahrefs.com/keywords-explorer`
+https://ahrefs.com/site-audit
+https://ahrefs.com/rank-tracker
+`https://ahrefs.com/content-explorer`
+^.{35,}$
+```
+
+## robots.txt (regex-like syntax)
+-  The example states that bots should not crawl links with the extension pdf.
+
+```
+User-agent: *
+Disallow: /*.pdf$
+
+----------
+
+/about.html
+/home.html
+`/document.pdf`
+/team.html
+`/introduction.pdf`
+/*.pdf$
+```
+
+## `.htaccess`
+
+php extension links are directed to html extensions with 301 code.
+```
+RewriteEngine On
+RewriteCond %{REQUEST_URI} .php$
+RewriteRule ^(.*).php$ /$1.html [R=301,L]
+
+----------
+
+/about.html
+/home.html
+`/product/detail.php`
+`/shop/12/buy.php`
+`/profile.php`
+^(.*).php$
 ```

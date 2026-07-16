@@ -84,9 +84,15 @@ Deleted branch add_contrib (was 5918b32).
 ```
 
 ![[pullReq-megacorp.png]]
-## The Workflow
+## Tips for less rejections in PRs
+- Review your code before you make your PR live
+- Make sure that maintainers want these changes
+	- Look through the repos make sure to search and validate that this is an issue
+	- If no issue found open up an issue and tell maintainer you want to fix it
 
 # Reflog
+- Reference logs or "reflogs", record when the tip of branches and other references were updated in the local repository. 
+- Reflogs are useful in various Git commands to specify the old value of reference.
 ## HEAD
 - You'll see a big scary word in the Git world called `HEAD`.
 - Branches are references to commits, and `HEAD` is a reference to the branch you're currently on.
@@ -980,6 +986,20 @@ Dropped refs/stash@{0} (868b8ffe52e584217c0cc15ef7503586b753aeee)
 - When you do, the "stash entry" will contain both the staged and unstaged changes and both your working directory and index will be reverted to the state of the last commit. 
 - It's a very convenient way to "pause" your work and come back to it later.
 
+| No Stash                       | Stash                    |
+| ------------------------------ | ------------------------ |
+| Stage changes                  | -                        |
+| Create a commit                | -                        |
+| Pull new changes               | Stash worktree and index |
+| Finish feature                 | Pull new changes         |
+| Create another commit          | Pop stash when necessary |
+| Squah the two commits together | -                        |
+>[!tip] Tip
+> Do not stash when you have to pull in a change and you have serveral commits into a change that you are trying to make
+> When you have a thousand line change. Make small commits along the way as checkpoint in case you mess up. Later you can squash these commits into one
+
+
+
 ![[Git-stash.png]]
 
 ## Multiple Stashes
@@ -1148,11 +1168,15 @@ index 13b4fae..f0c36b8 100644
 - `git revert`: Create a new commit that undoes a previous commit
 ### When to Reset
 - If you're working on your own branch, and you're just undoing something you've already committed, say you're cleaning everything up so you can open a pull request, then git reset is probably what you want.
+- It's used more often on private branch
 
 ### When to Revert
 - However, if you want to undo a change that's already on a shared branch (especially if it's an older change), then git revert is the safer option. It won't rewrite any history, and therefore won't step on your coworkers' toes.
+- It's used more often on the public branch
+- When you are on a larger team. Often somebody needs new change to go out. such that a new customer feature that high priority has to get out but your changes have broken the build and were not discovered until it released in the production. hence you use revert
 # Cherry Pick
 - When you want to yoink a commit from a branch, but you don't want to merge or rebase because you don't want all the commits.
+- Its useful when you have branch called `release` and `main` from time to time release get cut and the main branch updates the release. Imagine there are 100 of commits in main but a bug was discovered in production but we can fix the bud in main and the  transfer over that one singular commit to release and then re-productise release thus fixing the bug and not all changes are contained 
 - `git cherry-pick <commit-hash>`
 
 ```bash
