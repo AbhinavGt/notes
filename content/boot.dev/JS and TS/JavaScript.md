@@ -697,3 +697,78 @@ function getLabel(numStars) {
 - `var` declaration is hoisted with type 2 behavior;
 - `let`, `const`, and `class declarations` (also collectively called `lexical declarations`) are hoisted with type 3 behavior; 
 - `import` declarations are hoisted with type 1 and type 4 behavior.
+## Multiple Return Values
+- In JavaScript, multiple return values are not allowed
+```JS
+function getUser() {
+  return "name@domain.com", 21, "active";
+  // DON'T DO THIS
+  // it only returns 'active'
+}
+```
+- the JavaScript code above won't actually throw any sort of error, it will just silently return the "active" string.
+- most developers return an object that contains the values they want to return.
+## Functions As Values
+- JavaScript supports first-class and higher-order functions.
+- Functions can be treated like any other data type – such as numbers and strings and booleans
+-  First-Class Function :- A  function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+```JS
+//Assigning a function to a variable
+
+const foo = () => {
+  console.log("foobar");
+};
+foo(); // Invoke it using the variable
+// foobar
+
+// Passing a function as an argument
+function sayHello() {
+  return "Hello, ";
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+
+//Returning a function
+function sayHello() {
+  return () => {
+    console.log("Hello!");
+  };
+}
+
+```
+
+> [!note] Note
+> - Even if your function was named, you can use the variable name to invoke it. 
+> - Naming it will be helpful when debugging your code. But it won't affect the way we invoke it.
+> - The function that we pass as an argument to another function is called a callback function. 
+> - `sayHello()` is a callback function
+> - A function that returns a function or takes other functions as arguments is called a higher-order function.
+
+## Scope
+- The scope is the current context of execution in which values and expressions are "visible" or can be referenced.
+- If a variable or expression is not in the current scope, it will not be available for use. 
+- Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
+- It can behave differently depending on the environment (such as a browser or Node.js). 
+- There are four levels, from highest to lowest:
+	- Global Scope:
+		- Variables declared globally have the highest level of scope and can be accessed from anywhere in your code.
+		- In browsers, global variables are properties of the window object. 
+		- For example, `window.myGlobalVar = 'hello world'` defines a global variable.
+        - In Node.js, global variables are properties of the global object: `global.myGlobalVar = 'hello world'`.
+    - Module Scope:
+	    - In ES modules (both in Node.js and modern browsers), variables declared at the top level of a module are scoped to that module. 
+	    - They are not added to the global scope.
+	    - In the browser, using `<script type="module">` creates a module scope for that script.
+    - Function Scope:
+	    - Variables declared with `var` (we try to avoid this) are limited to the function scope. 
+	    - They are accessible only within that function and any nested functions.
+	- Block Scope:
+		- ES6 introduced block scope with the let and const keywords. 
+		- A block is typically defined by curly braces `{}`, like in if statements, loops, and other blocks of code.
+        - Variables declared with let and const are confined to their block, making them more predictable and reducing the chances of accidental variable hoisting.
+        - 
